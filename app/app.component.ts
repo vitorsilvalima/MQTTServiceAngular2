@@ -4,15 +4,7 @@ import { MQTTService } from './mqttService/mqtt.service';
 @Component({
     selector: 'my-app',
     providers:[MQTTService],
-    template: `
-    <h1>{{title}}</h1>
-    <ul class="heroes">
-      <li *ngFor="let message of messages">
-        Message :{{message.destinationName}} / {{message.payloadString}}
-      </li>
-    </ul>
-    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-  `
+    templateUrl: 'app/app.component.html'
 })
 export class AppComponent { 
     title = 'MQTT Service Test';
